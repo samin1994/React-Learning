@@ -8,13 +8,6 @@ class Menu extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            selectedDish: null
-        }
-    }
-
-    OnDishSelect(dish) {
-        this.setState({selectedDish: dish});
     }
 
     render() {
@@ -22,7 +15,7 @@ class Menu extends Component {
             return(
                 <div className="col-12 col-md-5 m-1">
                     <Card key={dish.id}
-                    onClick={() => this.OnDishSelect(dish)}>
+                    onClick={() => this.props.onClick(dish.id)}>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardImgOverlay>
                             <CardTitle>{dish.name}</CardTitle>
@@ -38,7 +31,7 @@ class Menu extends Component {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <DishDetail selected={this.state.selectedDish} />
+                        
                     </div>
                 </div>
             </div>

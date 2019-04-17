@@ -51,18 +51,20 @@ class DishDetail extends Component {
     render() {
         if (this.props.selected == null) {
             return (
-                <div></div>
+                <div className="container"></div>
             );
         }
         else {
             return(
-                <div className="row">
-                    <div className="col-12 col-md-5 m-1">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 col-md-5 m-1">
                         {this.renderDish(this.props.selected)}
-                    </div>
-                    <div className="col-12 col-md-5 m-1">
+                        </div>
+                        <div className="col-12 col-md-5 m-1">
                         <h4>Comments</h4>
                         {this.renderComments(this.props.selected.comments)}
+                        </div>
                     </div>
                 </div>
             );
