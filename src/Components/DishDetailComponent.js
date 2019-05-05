@@ -56,7 +56,6 @@ import { Link } from 'react-router-dom';
                 <div className="container">
                     <div className="row">
                         <Breadcrumb>
-
                             <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
                             <BreadcrumbItem active>{props.selected.name}</BreadcrumbItem>
                         </Breadcrumb>
